@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "app-ui": "git@github.com:Kalinnikov2n/pres_app_ui.git",
+    "app-server": "git@github.com:Kalinnikov2n/pres_app_server.git"
+  }
+}

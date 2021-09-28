@@ -5,7 +5,13 @@
   "main": "index.js",
   "scripts": {
     "commit": "git-cz",
-    "commit-all": "git add . && cz"
+    "commit-all": "git add . && cz",
+    "start:ui": "cd app-ui && npm start",
+    "start:server": "cd app-server && npm start",
+    "start": "npm run start:ui & npm run start:server",
+    "init:ui": "cd app-ui && npm i && cd ..",
+    "init:server": "cd app-server && npm i && cd ..",
+    "postinstall": "meta git update && npm run init:ui && npm run init:server"
   },
   "repository": {
     "type": "git",
@@ -27,7 +33,9 @@
   "homepage": "https://github.com/Kalinnikov2n/pres_app#readme",
   "dependencies": {
     "commitizen": "^4.2.4",
-    "cz-conventional-changelog": "^3.3.0"
+    "cz-conventional-changelog": "^3.3.0",
+    "meta": "^2.2.25",
+    "meta-git": "^1.1.7"
   },
   "config": {
     "commitizen": {
